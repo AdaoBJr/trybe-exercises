@@ -39,14 +39,50 @@
 //*****
 
 
+//let base = 5;
+//let ast = "*";
+//let lin = "";
+
+//for (let indexLin = 0; indexLin <= base; indexLin++){
+   // lin = lin + ast;
+
+   // console.log(lin)
+
+   // }
+    
+
+    //Exercício 3
+    //Agora inverta o lado do triângulo. Por exemplo: 
+    //n = 5
+
+    //*
+   //**
+  //***
+ //****
+//*****
+
+//Atenção! Note que esse exercício é bem mais complexo que o 
+//anterior! Não basta, aqui, imprimir somente asteriscos. Você 
+//precisará de uma lógica para imprimir espaços também.
+
+
 let base = 5;
 let ast = "*";
-let lin = "";
+let lin = " ";
+let valorMaxAst = base;
 
 for (let indexLin = 0; indexLin <= base; indexLin++){
-    lin = lin + ast;
-
-    console.log(lin)
-
+  for (let indexColunas = 0; indexColunas <= base; indexColunas++){
+    if (indexColunas < valorMaxAst){
+      lin = lin + " ";
+    } else {
+      lin = lin + ast;
     }
+  }
+  console.log(lin);
+  lin = " ";
+  valorMaxAst = valorMaxAst - 1;
+    
+
+}
     
