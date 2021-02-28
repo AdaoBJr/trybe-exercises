@@ -66,23 +66,89 @@
 //precisará de uma lógica para imprimir espaços também.
 
 
+//let base = 5;
+//let ast = "*";
+//let lin = " ";
+//let valorMaxAst = base;
+
+//for (let indexLin = 0; indexLin <= base; indexLin++){
+  //for (let indexColunas = 0; indexColunas <= base; indexColunas++){
+   // if (indexColunas < valorMaxAst){
+  //    lin = lin + " ";
+  //  } else {
+   //   lin = lin + ast;
+ //   }
+ // }
+ // console.log(lin);
+ // lin = " ";
+ // valorMaxAst = valorMaxAst - 1;
+ // }
+    
+
+//Exercício 4
+//Depois, faça uma pirâmide com n asteriscos de base:
+
+//n = 5
+
+//  *
+// ***
+//*****
+
+//Modelo do Gabarito
+//let base = 5;
+//let ast = "*";
+//let lin = " ";
+//let meio = (base + 1)/2;
+//let meioEsq = meio;
+//let meioDir = meio;
+
+
+//for (let indexLin = 0; indexLin < meio; indexLin++){
+  //for (let indexColunas = 1; indexColunas <= base; indexColunas++){
+    //if (indexColunas <= meioEsq && meioDir <= indexColunas){
+      //lin = lin + ast;
+      
+    //} else {
+     //lin = lin + " ";
+    //}
+  //}
+  //console.log(lin);
+   //lin = " ";
+  //meioEsq += 1;
+ //meioDir -= 1;
+   //}
+
+
+   //Minha resolução
 let base = 5;
 let ast = "*";
 let lin = " ";
-let valorMaxAst = base;
+let meio = (base + 1)/2; //Base sempre com ns ímpares
+let meioEsq = meio;
+let meioDir = meio;
+let qtideLinhas = (base + 1)/2; //Base sempre com ns ímpares
+let qtideColunas = base;
 
-for (let indexLin = 0; indexLin <= base; indexLin++){
-  for (let indexColunas = 0; indexColunas <= base; indexColunas++){
-    if (indexColunas < valorMaxAst){
-      lin = lin + " ";
-    } else {
+
+for (let indexLin = 1; indexLin <= qtideLinhas; indexLin++){     //Percorrendo as linhas
+  for (let indexColunas = 1; indexColunas <= qtideColunas; indexColunas++){ //Percorrendo as colunas
+    if ((indexColunas - meio) == 0 ){ //Determinando se o local é no meio e Caso seja efetuando a math de localização no plano cartesiano (tabela) e inserção do asterisco
       lin = lin + ast;
+      
+    } else if ((indexColunas < meioEsq) && (indexLin > (meio - indexColunas))) { //Determinando se o local é do Lado Esq e Caso seja efetuando a math de localização no plano cartesiano (tabela) e inserção do asterisco
+      lin = lin + ast;
+
+    } else if ((indexColunas > meioDir) && (indexLin > (indexColunas - meio))) { //Determinando se o local é do Lado Dir e Caso seja efetuando a math de localização no plano cartesiano (tabela) e inserção do asterisco
+      lin = lin + ast;
+
+    } else {
+      lin = lin + " "; 
     }
   }
   console.log(lin);
-  lin = " ";
-  valorMaxAst = valorMaxAst - 1;
-    
+   lin = " "; // Limpando a memória da variável lin para o próximo loop
+   }
 
-}
-    
+
+
+
