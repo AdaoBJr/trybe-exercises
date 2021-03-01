@@ -17,6 +17,21 @@
 //valor "Sim" e, em seguida, imprima o objeto no console. 
 
 
+//let info = {
+   // personagem: "Margarida",
+   // origem: "Pato Donald",
+   // nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  //};
+
+  //info.recorrente = "Sim";
+
+  //console.table(info);
+
+
+   //Exercício 3
+//Faça um for/in que mostre todas as chaves do objeto. 
+
+
 let info = {
     personagem: "Margarida",
     origem: "Pato Donald",
@@ -25,4 +40,9 @@ let info = {
 
   info.recorrente = "Sim";
 
-  console.table(info);
+  for (let key in info){
+      console.log(key);
+  }
+
+
+  
