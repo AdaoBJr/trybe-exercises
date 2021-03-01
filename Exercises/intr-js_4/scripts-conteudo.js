@@ -33,6 +33,9 @@ let car = {
     modelo : "Model S",
     cor : "Vermelho"
 };
+//for (let index in car){
+ //   console.log(index);
+//}
 
 for (let index in car){
     console.log(index, car[index]);
