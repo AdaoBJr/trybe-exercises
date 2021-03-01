@@ -94,27 +94,43 @@
 //-------------------------------------------------------------------------------------
 //FUNCTION
 
-let palavra = "arara";
-let arrayLetras = palavra.split("");
-let isPa = false;
+//Exercício 1
+//Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
+
+//let palavra = "arara";
+//let arrayLetras = palavra.split("");
+//let isPa = false;
 
 //for ( let index = 0; index < arrayLetras.length; index++){
-//  console.log(index, arrayLetras[index]);
+//console.log(index, arrayLetras[index]);
 //}
 
 //for ( let index in arrayLetras){
  // console.log(index, arrayLetras[index]);
 //}
 
-for (let index = 0; index < arrayLetras.length; index++){
-  if (arrayLetras[index] == arrayLetras[(arrayLetras.length-1) - index]){
-  isPa = true;
-} else {
-  }
-}
-   
-console.log(isPa);
+//for (let index = 0; index < arrayLetras.length; index++){
+ // if (arrayLetras[index] == arrayLetras[(arrayLetras.length-1) - index]){
+ // isPa = true;
+//} else {
+//  }
+//} 
+//console.log(isPa);
 
+
+function verificaPa(palavra) {
+  let arrayLetras = palavra.split("");
+  let isPa = false;
+
+  for ( let index in arrayLetras){
+    if (arrayLetras[index] == arrayLetras[(arrayLetras.length-1)-index]){
+      isPa = true;
+    }
+  }
+  return isPa;
+}
+
+console.log(verificaPa('arara'));
       
        
  
