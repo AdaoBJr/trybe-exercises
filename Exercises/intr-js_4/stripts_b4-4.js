@@ -118,22 +118,40 @@
 //console.log(isPa);
 
 
-function verificaPa(palavra) {
-  let arrayLetras = palavra.split("");
-  let isPa = false;
+//function verificaPa(palavra) {
+  //let arrayLetras = palavra.split("");
+  //let isPa = false;
 
-  for ( let index in arrayLetras){
-    if (arrayLetras[index] == arrayLetras[(arrayLetras.length-1)-index]){
-      isPa = true;
-    }
-  }
-  return isPa;
-}
+  //for ( let index in arrayLetras){
+  //  if (arrayLetras[index] == arrayLetras[(arrayLetras.length-1)-index]){
+  //    isPa = true;
+  //  }
+ // }
+ // return isPa;
+//}
 
-console.log(verificaPa('arara'));
+//console.log(verificaPa('arara'));
       
-       
  
 
+//Exercício 2
+//Crie uma função que receba um array de inteiros e retorne o índice do maior valor. 
+ 
+function verificaMaiorI (arrayI) {
+  let maiorN = 0;
+  let maiorI = 0;
+  let arrayInserido = arrayI;
 
-  
+  for (let index in arrayInserido){
+    if (arrayInserido[index] > maiorN){
+      maiorN = arrayInserido[index];
+    }    
+  }
+  maiorI = arrayInserido.indexOf(maiorN);
+
+  return maiorI;
+
+}
+console.log (verificaMaiorI([ 2, 3, 6, 7, 10, 1]));
+
+
