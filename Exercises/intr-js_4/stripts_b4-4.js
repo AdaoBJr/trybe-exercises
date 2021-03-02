@@ -158,19 +158,43 @@
 //Exercício 3
 //Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 
-function verificaMenorI (arrayI) {
-  let menorN = 0;
-  let menorI = 0;
-  let arrayInserido = arrayI;
+//function verificaMenorI (arrayI) {
+  //let menorN = 0;
+  //let menorI = 0;
+  //let arrayInserido = arrayI;
 
-  for (let index in arrayInserido){
-    if (arrayInserido[index] < menorN){
-      menorN = arrayInserido[index];
-    }    
+ // for (let index in arrayInserido){
+  //  if (arrayInserido[index] < menorN){
+  //    menorN = arrayInserido[index];
+   // }    
+  //}
+ // menorI = arrayInserido.indexOf(menorN);
+
+  //return menorI;
+
+//}
+//console.log (verificaMenorI([ 2, 4, 6, 7, 10, 0, -3]));
+
+
+//Exercício 4
+//Crie uma função que receba um array de nomes e retorne o nome com a 
+//maior quantidade de caracteres.
+
+
+  let ArrayNomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+  let arrayN = [];
+  let numeroMaiorArray = 0;
+  let indiceMaior = 0;
+
+  for (let i in ArrayNomes){
+    arrayN.push(ArrayNomes[i].split("").length)
+    for (let index in arrayN){
+      if (arrayN[index] > numeroMaiorArray){
+        numeroMaiorArray = arrayN[index];
+      }
+    }
   }
-  menorI = arrayInserido.indexOf(menorN);
-
-  return menorI;
-
-}
-console.log (verificaMenorI([ 2, 4, 6, 7, 10, 0, -3]));
+    indiceMaior = arrayN.indexOf(numeroMaiorArray);
+    ArrayNomes[indiceMaior];
+    console.log(ArrayNomes[indiceMaior]);
+    
