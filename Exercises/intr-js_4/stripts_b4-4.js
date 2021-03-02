@@ -137,21 +137,40 @@
 //Exercício 2
 //Crie uma função que receba um array de inteiros e retorne o índice do maior valor. 
  
-function verificaMaiorI (arrayI) {
-  let maiorN = 0;
-  let maiorI = 0;
+//function verificaMaiorI (arrayI) {
+  //let maiorN = 0;
+ // let maiorI = 0;
+ // let arrayInserido = arrayI;
+
+ // for (let index in arrayInserido){
+  //  if (arrayInserido[index] > maiorN){
+  //    maiorN = arrayInserido[index];
+  //  }    
+  //}
+  //maiorI = arrayInserido.indexOf(maiorN);
+
+  //return maiorI;
+
+//}
+//console.log (verificaMaiorI([ 2, 3, 6, 7, 10, 1]));
+
+
+//Exercício 3
+//Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+function verificaMenorI (arrayI) {
+  let menorN = 0;
+  let menorI = 0;
   let arrayInserido = arrayI;
 
   for (let index in arrayInserido){
-    if (arrayInserido[index] > maiorN){
-      maiorN = arrayInserido[index];
+    if (arrayInserido[index] < menorN){
+      menorN = arrayInserido[index];
     }    
   }
-  maiorI = arrayInserido.indexOf(maiorN);
+  menorI = arrayInserido.indexOf(menorN);
 
-  return maiorI;
+  return menorI;
 
 }
-console.log (verificaMaiorI([ 2, 3, 6, 7, 10, 1]));
-
-
+console.log (verificaMenorI([ 2, 4, 6, 7, 10, 0, -3]));
