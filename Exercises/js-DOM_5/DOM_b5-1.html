@@ -67,7 +67,38 @@ function mudarCorFundo (elemento, cor){
     }
 mudarCorFundo ("main-content","rgb(76,164,109)")
 
-/*3.Crie uma função que mude a cor do quadrado vermelho para branco.*/
+/*3.Crie uma função que mude a cor do quadrado vermelho para branco. .main-content .center-content*/ 
+function mudarCorCorpo (elemento, cor){
+       let corCorpo = document.getElementsByClassName(elemento)[0];
+       corCorpo.style.backgroundColor = cor;
+    }
+mudarCorCorpo ("center-content","#fff")
+
+/*4.Crie uma função que corrija o texto da tag <h1>.*/ 
+function mudarTitulo (elemento, texto){
+       let titulo = document.getElementsByTagName(elemento)[0];
+       titulo.innerText = texto;
+    }
+mudarTitulo ("h1","Exercício 5.1 - JavaScript e DOM");
+
+/*5.Crie uma função que modifique todo o texto da tag <p> para maiúsculo.center-content*/ 
+    function mudarCase (elemento){ 
+       let texto = document.getElementsByTagName(elemento);
+       for (let i in texto){
+        texto[i].innerHTML = texto[i].innerHTML.toLocaleUpperCase();
+       }           
+   }
+mudarCase ("p");
+
+/*6.Crie uma função que exiba o conteúdo de todas as tags <p> no console*/ 
+    function exibirNoConsole (elemento){
+       let exibir = document.getElementsByTagName(elemento);
+       for (let i in exibir){
+        console.log(exibir[i].innerHTML);
+       }  
+    }
+exibirNoConsole ("p");
+
     </script>
   </body>
 </html>
