@@ -64,7 +64,38 @@ createDaysOfTheMonth();
 //Exercício 2
 // Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente 
 // um botão com o nome "Feriados".
-
 // 1.Adicione a este botão a ID "btn-holiday" .
 // 2.Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
+function newButton(buttonName){
+    let localDivBtn = document.querySelector(".buttons-container");
+    let btnHolidays = document.createElement("button");
+    
+    btnHolidays.id = "btn-holiday";
+    btnHolidays.innerText = buttonName;
+    localDivBtn.appendChild(btnHolidays);
+}
+newButton("Feriados");
+
+//Exercício 3
+//Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda 
+//a cor de fundo dos dias que possuem a classe "holiday" .
+//1.É interessante que este botão possua também a lógica inversa. Ao ser clicado 
+//novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+
+let localReceiveClick = document.querySelector("#btn-holiday");
+let localReceiveBg = document.querySelectorAll(".holiday");
+let bgColorInitial = "rgb(238,238,238)";
+let newBgColor = "white";
+
+localReceiveClick.addEventListener("click",receiveClick);
+    
+function receiveClick (){
+    for (let i = 0; i < localReceiveBg.length; i += 1){
+        if (localReceiveBg[i].style.backgroundColor == newBgColor){
+            localReceiveBg[i].style.backgroundColor = bgColorInitial
+        } else {
+            localReceiveBg[i].style.backgroundColor = newBgColor
+        }
+    }
+}
